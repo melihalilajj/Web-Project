@@ -1,0 +1,375 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    background-color: black;
+    font-family: sans-serif;
+}
+
+.logo {
+    color: blanchedalmond;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 20px;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    color: cornsilk;
+    letter-spacing: 3px;
+}
+
+.nav-links li {
+    list-style: none;
+}
+
+.lines {
+    display: none;
+    cursor: pointer;
+}
+
+.lines div {
+    width: 25px;
+    height: 3px;
+    background-color: cornsilk;
+    margin: 5px;
+    transition: 0.3s ease;
+}
+
+@media screen and (max-width:1024px) {
+    .nav-links {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width:768px) {
+    html {
+        overflow-x: hidden;
+    }
+    body {
+        overflow-x: hidden;
+    }
+    .nav-links {
+        z-index: 2;
+        position: absolute;
+        right: 0px;
+        height: 92vh;
+        top: 8vh;
+        background-color: black;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        transform: translateX(100%);
+        transition: transform 0.5 ease-in;
+    }
+    .nav-links li {
+        opacity: 0;
+    }
+    .lines {
+        display: block;
+    }
+    .nav-links a {
+        text-decoration: none;
+        font-size: 20px;
+        font-weight: bold;
+        color: cornsilk;
+        letter-spacing: 3px;
+    }
+}
+
+.nav-active {
+    transform: translateX(0%);
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+    opacity: 0;
+}
+
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+.slider {
+    position: relative;
+    width: 100%;
+    background: #2c3e50;
+}
+
+.myslider {
+    height: 700px;
+    display: none;
+    overflow: hidden;
+}
+
+.prev,
+.next {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    font-size: 50px;
+    padding: 15px;
+    cursor: pointer;
+    color: #fff;
+    transition: 0.1s;
+    user-select: none;
+}
+
+.prev:hover,
+.next:hover {
+    color: black;
+}
+
+.next {
+    right: 0;
+}
+
+.dotsbox {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    bottom: 20px;
+    cursor: pointer;
+}
+
+.dot {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.acttive,
+.dot:hover {
+    border-color: black;
+}
+
+.fade {
+    -webkit-animation-name: fade;
+    animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+#footer {
+    position: relative;
+    width: 100%;
+    background-color: #f2f2f2;
+    font-family: cursive;
+    font-weight: bold;
+    text-align: center;
+    height: 100px;
+    padding: 35px;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: 0.8;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: 0.8;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.txt {
+    position: absolute;
+    color: black;
+    letter-spacing: 1.3px;
+    line-height: 35px;
+    top: 40%;
+    left: 15%;
+    -webkit-animation: posi;
+    -webkit-animation-duration: 2s;
+    animation-name: posi;
+    animation-duration: 2s;
+    z-index: 1;
+    font-size: larger;
+    font-weight: 1000;
+    box-shadow: rgba(255, 255, 255, 0.5) 0px 0px 1000px inset;
+}
+
+@-webkit-keyframes posi {
+    from {
+        left: 25%
+    }
+    to {
+        left: 15%;
+    }
+}
+
+@keyframes posi {
+    from {
+        left: 25%
+    }
+    to {
+        left: 15%;
+    }
+}
+
+.txt h1 {
+    color: black;
+    font-weight: bold;
+    margin: 20px;
+}
+
+.txt p {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+img {
+    transform: scale(1.5, 1.5);
+    -webkit-animation-name: zoomin;
+    -webkit-animation-duration: 40s;
+    animation-name: zoomin;
+    animation-duration: 40s;
+}
+
+@-webkit-keyframes zoomin {
+    from {
+        transform: scale(1.1);
+    }
+    to {
+        transform: scale(1.5, 1.5);
+    }
+}
+
+@keyframes zoomin {
+    from {
+        transform: scale(1.1);
+    }
+    to {
+        transform: scale(1.5, 1.5);
+    }
+}
+
+@media screen and(max-width:800px) {
+    .myslider {
+        height: 500px;
+    }
+    .txt {
+        line-height: 25px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -webkit-animation-name: posi2;
+        -webkit-animation-duration: 2s;
+        animation-name: posi2;
+        animation-duration: 2s;
+    }
+    @-webkit-keyframes posi2 {
+        from {
+            top: 35%;
+        }
+        to {
+            top: 50%;
+        }
+    }
+    @keyframes posi2 {
+        from {
+            top: 35%;
+        }
+        to {
+            top: 50%;
+        }
+    }
+    .txt h1 {
+        font-size: 40px;
+    }
+    .txt p {
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width:520px) {
+    .txt h1 {
+        font-size: 30px;
+    }
+    .sign {
+        margin-right: 20px;
+    }
+    .sign a {
+        font-size: 12px;
+    }
+    #logo {
+        line-height: 100px;
+        margin-left: 10px;
+        font-size: 17px;
+    }
+    .sign {
+        display: inline;
+        line-height: 90px;
+        margin-right: auto;
+        padding: 1%;
+    }
+    .signLI {
+        display: inline;
+        line-height: 90px;
+        margin-right: auto;
+        padding: 1%;
+    }
+    .act {
+        border: 1px solid #fff;
+        border-radius: 10px;
+        padding: 1px 5px;
+    }
+    .actLI {
+        border: 1px solid green;
+        border-radius: 10px;
+        padding: 1px 5px;
+    }
+    .sign a {
+        font-weight: normal;
+        font-size: 12px;
+    }
+    .signLI a {
+        font-weight: normal;
+        font-size: 12px;
+    }
+}
+
+* {
+    font-family: system-ui !important;
+}
