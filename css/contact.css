@@ -1,0 +1,234 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    background-color: black;
+    font-family: sans-serif;
+}
+
+.logo {
+    color: blanchedalmond;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 20px;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    color: cornsilk;
+    letter-spacing: 3px;
+}
+
+.nav-links li {
+    list-style: none;
+}
+
+.lines {
+    display: none;
+    cursor: pointer;
+}
+
+.lines div {
+    width: 25px;
+    height: 3px;
+    background-color: cornsilk;
+    margin: 5px;
+    transition: 0.3s ease;
+}
+
+.nav-active {
+    transform: translateX(0%);
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+    opacity: 0;
+}
+
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+main,
+input,
+textarea {
+    font-family: cursive;
+}
+
+
+/*formaaaaaaaaaaa*/
+
+main {
+    background-image: url(/images/coveer.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.box {
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    min-height: 550px;
+    margin: 100px auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+}
+
+form:placeholder {
+    margin-left: 30px;
+}
+
+form {
+    color: #061306;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 30%;
+    margin-right: 25%;
+}
+
+form input {
+    background-color: transparent;
+    border: none;
+    border-bottom: 5px solid rgb(6, 19, 6, 0.8);
+    outline: none;
+    padding: 20px 0;
+}
+
+form textarea {
+    margin-top: 40px;
+    background-color: transparent;
+    border: 3px solid rgb(6, 19, 6, 0.8);
+    outline: none;
+    color: #061306;
+    padding: 5px;
+    border-radius: 15px;
+}
+
+#submit-button {
+    border: solid;
+    border-radius: 15px;
+    width: 100px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    height: 30px;
+    padding-top: 5px;
+    text-align: center;
+    color: rgb(6, 19, 6);
+    background-color: #40bf40;
+    border-style: none;
+    font-style: oblique;
+    font-weight: bold;
+}
+
+#submit-button:hover {
+    color: black;
+    transition: 1.4s;
+}
+
+#footer {
+    position: relative;
+    width: 100%;
+    background-color: #f2f2f2;
+    font-family: cursive;
+    font-weight: bold;
+    text-align: center;
+    height: 90px;
+    padding: 35px;
+}
+
+* {
+    font-family: system-ui !important;
+}
+
+@media screen and (max-width:1024px) {
+    .nav-links {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width:768px) {
+    html {
+        overflow-x: hidden;
+    }
+    body {
+        overflow-x: hidden;
+    }
+    .nav-links {
+        z-index: 2;
+        position: absolute;
+        right: 0px;
+        height: 92vh;
+        top: 8vh;
+        background-color: black;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        transform: translateX(100%);
+        transition: transform 0.5 ease-in;
+    }
+    .nav-links li {
+        opacity: 0;
+    }
+    .lines {
+        display: block;
+    }
+    .nav-links a {
+        text-decoration: none;
+        font-size: 20px;
+        font-weight: bold;
+        color: cornsilk;
+        letter-spacing: 3px;
+    }
+    /**/
+    form {
+        margin: 9%;
+    }
+    form input {
+        border-bottom: 2px solid rgb(6, 19, 6, 0.8);
+    }
+    form textarea {
+        border: 2px solid rgb(6, 19, 6, 0.8);
+    }
+    #submit-button {
+        border-radius: 10px;
+        width: 80px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        height: 30px;
+        padding-top: 5px;
+        text-align: center;
+        color: rgb(6, 19, 6);
+        background-color: #40bf40;
+    }
+}
