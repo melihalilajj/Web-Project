@@ -11,7 +11,7 @@
 
 <body>
 
-
+<!-- 
     <header>
         <nav>
             <div class="logo">
@@ -46,7 +46,15 @@
 
             </div>
         </nav>
-    </header>
+    </header> -->
+
+
+    <?php
+include './parts/header.php';
+?>
+
+
+
 
     <main>
         <br>
@@ -65,11 +73,18 @@
             </form>
 
         </div>
-        <footer>
+        <!-- <footer>
             <div id="footer">
                 <p>ⓒ Architecture and Design-2020</p>
             </div>
-        </footer>
+        </footer> -->
+
+        <?php
+include './parts/footer.php';
+?>
+
+
+
     </main>
     <script src="./JS/Contact.js"></script>
     <script src="./JS/nav.js"></script>

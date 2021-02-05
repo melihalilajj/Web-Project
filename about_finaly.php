@@ -8,7 +8,13 @@
     <title>Document</title>
 </head>
 
-<body>
+
+
+<?php
+include './parts/header.php';
+?>
+
+<!-- <body>
 
     <header>
 
@@ -46,7 +52,7 @@
 
             </div>
         </nav>
-    </header>
+    </header> -->
 
     <main>
         <div class="about">
@@ -64,5 +70,7 @@
     </main>
     <script src="./JS/nav.js"></script>
 </body>
-
+<?php
+include './parts/footer.php';
+?>
 </html>

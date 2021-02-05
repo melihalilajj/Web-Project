@@ -9,6 +9,8 @@
     <script src="https://kit.fontawesome.com/68425b0878.js" crossorigin="anonymous"></script>
 </head>
 
+<body>
+<!-- 
 <header>
     <nav>
         <div class="logo">
@@ -44,10 +46,17 @@
         </div>
     </nav>
 
-    <script src="/nav.js"></script>
-</header>
+    
+</header> -->
 
-<body>
+
+<?php
+include './parts/header.php';
+?>
+
+<!-- <script src="./JS/nav.js"></script> -->
+
+
     <main>
 
         <div class="main">
@@ -203,14 +212,16 @@
 
 
 
-    <footer>
+    <!-- <footer>
         <div id="footer">
             <p>ⓒ Architecture and Design-2020</p>
         </div>
-    </footer>
+    </footer> -->
 
 
-
+    <?php
+include './parts/footer.php';
+?>
 
 </body>
 

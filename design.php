@@ -7,7 +7,7 @@
     <title>Design</title>
     <link rel="stylesheet" href="./css/design.css">
 </head>
-
+<!-- 
 <body>
 
     <nav>
@@ -42,8 +42,11 @@
             <div class="line3"></div>
 
         </div>
-    </nav>
+    </nav> -->
 
+    <?php
+include './parts/header.php';
+?>
 
     <br>
     <br>
@@ -105,11 +108,17 @@
         </div>
 
     </div>
-    <footer>
+    <!-- <footer>
         <div id="footer">
             <p>ⓒ Architecture and Design-2020</p>
         </div>
-    </footer>
+    </footer> -->
+
+
+    <?php
+include './parts/footer.php';
+?>
+
 
     <script src="./JS/nav.js"></script>
 </body>
