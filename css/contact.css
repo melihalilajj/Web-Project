@@ -88,7 +88,7 @@ textarea {
 /*formaaaaaaaaaaa*/
 
 main {
-    background-image: url(/images/coveer.jpg);
+    background-image: url("/images/coveer.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -219,6 +219,15 @@ form textarea {
     }
     form textarea {
         border: 2px solid rgb(6, 19, 6, 0.8);
+    }
+    form .error {
+        color: red;
+    }
+    .success {
+        color: green;
+        text-align: center;
+        font-weight: bold;
+        font-size: 14px;
     }
     #submit-button {
         border-radius: 10px;
